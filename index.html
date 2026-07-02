@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Country Data Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <h1>Country Data Dashboard</h1>
+        <p>Visualizing country statistics using the World Bank API</p>
+    </header>
+
+    <main>
+
+        <section id="country-info">
+            <h2>Country Information</h2>
+            <p>
+                <strong>Letter:</strong>
+                <label for="letterSelect" style="display: none;">Choose Letter:</label>
+                <select id="letterSelect">
+                <option value="">-- Select Letter --</option>
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+                <option value="E">E</option>
+                <option value="F">F</option>
+                <option value="G">G</option>
+                <option value="H">H</option>
+                <option value="I">I</option>
+                <option value="J">J</option>
+                <option value="K">K</option>
+                <option value="L">L</option>
+                <option value="M">M</option>
+                <option value="N">N</option>
+                <option value="O">O</option>
+                <option value="P">P</option>
+                <option value="Q">Q</option>
+                <option value="R">R</option>
+                <option value="S">S</option>
+                <option value="T">T</option>
+                <option value="U">U</option>
+                <option value="V">V</option>
+                <option value="W">W</option>
+                <option value="X">X</option>
+                <option value="Y">Y</option>
+                <option value="Z">Z</option>
+                </select>
+            </p>
+            <p>
+                <strong>Country:</strong>
+                <label for="countrySelect" style="display: none;">Choose Country:</label>
+                <select id="countrySelect">
+                    <option value="">-- Select Country --</option>
+                </select>
+            </p>
+
+            <p>
+                This dashboard displays selected development indicators
+                retrieved from the World Bank Open Data API.
+            </p>
+        </section>
+
+        <section id="loading">
+            <p>Loading data...</p>
+        </section>
+
+        <section id="error" hidden>
+            <p>Unable to load data. Please try again later.</p>
+        </section>
+
+        <section id="charts">
+
+            <div class="chart-card">
+                <h2>GDP Over Time</h2>
+                <canvas id="gdpChart"></canvas>
+            </div>
+
+            <div class="chart-card">
+                <h2>Population Over Time</h2>
+                <canvas id="populationChart"></canvas>
+            </div>
+
+            <div class="chart-card">
+                <h2>Life Expectancy</h2>
+                <canvas id="lifeChart"></canvas>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <h3>Data Source</h3>
+
+        <p>
+            Data provided by the World Bank Open Data API.
+        </p>
+
+        <p>
+            Developed using HTML, CSS, JavaScript and Chart.js.
+        </p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
